@@ -95,6 +95,10 @@ app.get("/", (req, res) => {
   res.send("Root");
 });
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
+
 app.post("/login", async (req, res) => {
   let success = false;
   let user = await Users.findOne({ email: req.body.email });
