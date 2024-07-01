@@ -47,7 +47,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
     image_url: `${baseUrl}/images/${req.file.filename}`,
   });
 });
-app.use("/images", express.static("upload/images"));
+app.use("/images", express.static(path.join(__dirname, "upload/images")));
 
 // Middleware to fetch user from database
 const fetchuser = async (req, res, next) => {
