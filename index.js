@@ -13,7 +13,7 @@ app.use(cors());
 
 // Environment variables
 const port = process.env.PORT || 4000;
-const baseUrl = process.env.BASE_URL || "http://localhost:4000";
+const baseUrl = process.env.BASE_URL;
 const mongoURI = process.env.MONGODB_URI;
 const jwtSecret = process.env.JWT_SECRET || "secret_ecom";
 const password = process.env.DB_PASSWORD || "Flip%231G%21";
